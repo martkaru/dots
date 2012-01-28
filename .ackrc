@@ -1,0 +1,2 @@
+--type-add=ruby=.haml,.rake,.coffee,.sass
+--type-add=css=.less
