@@ -6,6 +6,7 @@ export PATH="/opt/local/bin:/opt/local/lib/postgresql82/bin/:/usr/local/bin:/usr
 export LANG=en_US.UTF-8
 export EDITOR=mvim
 export PATH=${PATH}:/Application/android-sdk-mac_x86/tools
+export PATH=${PATH}:/Users/martkaru/Library/Haskell/bin
 if [[ -s /Users/martkaru/.rvm/scripts/rvm ]] ; then source /Users/martkaru/.rvm/scripts/rvm ; fi
 
 
@@ -157,18 +158,20 @@ function setps1 {
     local CLEAR="\[\033[0m\]"
     local STY_COLOR='\[\033[1;37;41m\]'
     local PROMPT_COLOR='\[\033[1;94m\]'
-    local USER_HOST_COLOR='\[\033[1;30m\]'
+    local USER_HOST_COLOR=$CLEAR'\[\033[0;36m\]'
+    #local USER_HOST_COLOR='\[\033[1;33m\]'
     local PROMPT_DIR_COLOR='\[\033[1;94m\]'
     local GIT_LEADER_COLOR='\[\033[1;30m\]'
-    local GIT_BRANCH_COLOR=$CLEAR'\[\033[1;90m\]\[\033[4;90m\]'
+    local GIT_BRANCH_COLOR=$CLEAR'\[\033[1;32m\]\[\033[4;31m\]'
+    #local GIT_BRANCH_COLOR=$CLEAR'\[\033[1;90m\]\[\033[4;90m\]'
     local GIT_HEAD_COLOR=$CLEAR'\[\033[1;32m\]'
     local GIT_STATE_COLOR=$CLEAR'\[\033[1;31m\]'
 
     # Hostname-based colors in prompt.
-    if [[ $HOSTNAME != $PRIMARYHOST ]]
-    then
-        USER_HOST_COLOR=$REMOTE_USER_HOST_COLOR
-    fi
+    #if [[ $HOSTNAME != $PRIMARYHOST ]]
+    #then
+        #USER_HOST_COLOR=$REMOTE_USER_HOST_COLOR
+    #fi
 
     # Start with empty prompt.
     local PROMPTSTR=""
@@ -272,3 +275,5 @@ else
 fi
 
 
+
+[[ -s "/Users/martkaru/.rvm/scripts/rvm" ]] && source "/Users/martkaru/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
