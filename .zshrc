@@ -10,14 +10,9 @@ alias glg='git lg'
 alias vu='vagrant up'
 alias vh='vagrant halt'
 alias vs='vagrant ssh'
-alias l='ls -al'
-alias ltr='ls -ltr'
-alias lth='l -t|head'
-alias lh='ls -Shl | less'
-alias tf='tail -f -n 100'
 
 # exports
-export PATH=/Users/karu/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/karu/Library/Haskell/bin
+export PATH=/Users/karu/.rvm/bin:/usr/local/bin:/usr/local/sbin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/karu/Library/Haskell/bin:$PATH
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export EDITOR=vim
